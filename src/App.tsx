@@ -4,19 +4,23 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
+    Outlet,
 } from "react-router-dom";
-import List from './components/list/List';
 import Business from './components/business/Business';
 import NotFound from './components/notFound/NotFound';
+import Layout from './components/Layout';
+import BusinessList from './components/business/BusinessList';
 
 export default function App() {
     return (
-        <Router>
+        <Router >
             <Routes>
-                <Route index element={<List />} />
-                <Route path="/business/:id" element={<Business />} />
-                <Route path="*" element={<NotFound />} />
+                <Route element={<Layout><Outlet /></Layout>}>
+                    <Route index element={<BusinessList />} />
+                    <Route path="/business/:id" element={<Business />} />
+                    <Route path="*" element={<NotFound />} />
+                </Route>
             </Routes>
-        </Router>
+        </ Router>
     );
 }
