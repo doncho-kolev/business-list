@@ -1,31 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Row } from '../../features/list/Row';
 import ListComponent from '../../features/list/ListComponent';
+import { useGetBisunesses } from '../../services/useGetBusinesses';
 import { Business } from '../../models/Business';
 
-export default function BusinessList() {
-    const businesses: Business[] = [];
+export default function BusinessList(props: { businesses: Business[], valueGetter: (business: Business) => string }) {
+    const { businesses, valueGetter } = props;
     const navigate = useNavigate();
-    return (
-        <div>
-            <Row cells={[
-                { label: "Name" },
-                { label: "Description" }
-            ]}
-                className={"header-row"}
-            />
-            <ListComponent rows={businesses.map(b => {
-                return {
-                    cells: [
-                        { label: b.name },
-                        { label: b.description || "" },
-                    ],
-                    onClick: () => {
-                        navigate(`/business/${b.id}`)
-                    }
-                }
-            })} />
-        </div>
-    );
+
+    return <ListComponent rows={businesses.map(b => {
+        return {
+            cells: [
+                { label: b.name },
+                { label: valueGetter(b) },
+            ],
+            onClick: () => {
+                navigate(`/business/${b.id}`)
+            }
+        }
+    })} />;
 }

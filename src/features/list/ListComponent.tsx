@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Cell } from './Row';
 import { Row } from './Row';
 export default function ListComponent(props: {
@@ -9,7 +9,7 @@ export default function ListComponent(props: {
 }) {
     const { rows } = props;
     return <div>
-        {rows.length ? "No elements found" :
+        {!rows.length ? "No elements found" :
             <ul>
                 {rows.map((r, index) => {
                     return <li
