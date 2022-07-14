@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../assets/styles/list.scss'
 
 export interface Cell {
     label: string;
@@ -7,7 +8,7 @@ export interface Cell {
 
 export function Row(props: { cells: Cell[], className?: string }) {
     const { cells, className } = props;
-    return <div className={className ?? ""}>
+    return <div className={`${className ?? ""} row`}>
         {!cells.length ? "no data for row" :
             cells.map((c, index) => <CellComponent cell={c} key={index} />)
         }
@@ -16,7 +17,8 @@ export function Row(props: { cells: Cell[], className?: string }) {
 
 function CellComponent(props: { cell: Cell }) {
     const { cell } = props;
-    return <div className={cell.className ?? ""}>
+    console.log({ cell})
+    return <div className={`${cell.className ?? ""} cell`}>
         {cell.label}
     </div>
 }

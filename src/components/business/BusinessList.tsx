@@ -11,8 +11,8 @@ export default function BusinessList(props: { businesses: Business[], valueGette
     return <ListComponent rows={businesses.map(b => {
         return {
             cells: [
-                { label: b.name },
-                { label: valueGetter(b) },
+                { label: b.name, className: "name-cell" },
+                { label: valueGetter(b), className: "description-cell" },
             ],
             onClick: () => {
                 navigate(`/business/${b.id}`)

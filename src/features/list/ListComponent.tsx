@@ -10,15 +10,14 @@ export default function ListComponent(props: {
     const { rows } = props;
     return <div>
         {!rows.length ? "No elements found" :
-            <ul>
-                {rows.map((r, index) => {
-                    return <li
-                        onClick={r.onClick}
-                        key={index} >
-                        <Row cells={r.cells} />
-                    </li>
-                })}
-            </ul>
+            rows.map((r, index) => {
+                return <div
+                    onClick={r.onClick}
+                    key={index}
+                >
+                    <Row cells={r.cells} />
+                </div>
+            })
         }
     </div>;
 }

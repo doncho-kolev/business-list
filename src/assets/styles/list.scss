@@ -1,0 +1,19 @@
+.row {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    height: 105px;
+    margin-bottom: 5px;
+    background-color: white;
+
+    &:hover {
+        background-color: #f4f4f5;
+    }
+}
+
+.cell {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    padding-left: 60px;
+}
