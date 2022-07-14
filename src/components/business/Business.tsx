@@ -14,7 +14,7 @@ export default function Business() {
     const business = businesses.find(b => b.id === id);
     if (!business) return <p>Entity not found</p>;
 
-    const nearBusinesses = businesses.filter(b => b.address?.city === business.address?.city);
+    const nearBusinesses = businesses.filter(b => b.address?.city === business.address?.city && b.id !== business.id);
 
     return (
         <div className={"container"}>
