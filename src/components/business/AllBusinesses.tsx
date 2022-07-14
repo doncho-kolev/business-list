@@ -11,7 +11,7 @@ export default function AllBusiness() {
     if (error) return <p>Error</p>;
 
     return (
-        <div className={"container"}>
+        <div className={"container businesses-container"}>
             <div className={"scroll"}>
                 <Row
                     cells={[

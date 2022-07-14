@@ -1,0 +1,32 @@
+.main-image {
+    max-height: 570px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.information {
+    padding: 50px;
+    display: flex;
+}
+
+.section {
+    color: #6e6d7c;
+    flex: 1;
+    padding: 35px;
+
+    .header {
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+        padding-bottom: 80px;
+    }
+}
+
+.section-big {
+    flex: 2;
+    background-color: white;
+
+    .row {
+        background-color: #f8f8fa;
+    }
+}
