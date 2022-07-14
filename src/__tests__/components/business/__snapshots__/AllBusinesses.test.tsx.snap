@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All Businesses List renders all businesses component 1`] = `
+<div
+  class="container businesses-container"
+>
+  <div
+    class="scroll"
+  >
+    <div
+      class="header-row row"
+    >
+      <div
+        class="name-cell cell"
+      >
+        Name
+      </div>
+      <div
+        class="description-cell cell"
+      >
+        Description
+      </div>
+    </div>
+    <div>
+      Business List
+    </div>
+  </div>
+</div>
+`;

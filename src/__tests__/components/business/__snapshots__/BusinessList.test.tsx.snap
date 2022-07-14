@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Businesses List renders businesses list and click on entry 1`] = `
+<div>
+  <div>
+    <div
+      class=" row"
+    >
+      <div
+        class="name-cell cell"
+      >
+        Test Name
+      </div>
+      <div
+        class="description-cell cell"
+      >
+        Test Return Value
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ListComponent from '../../features/list/ListComponent';
-import { useGetBisunesses } from '../../services/useGetBusinesses';
 import { Business } from '../../models/Business';
 
 export default function BusinessList(props: { businesses: Business[], valueGetter: (business: Business) => string }) {
